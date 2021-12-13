@@ -149,8 +149,8 @@ st.markdown("""
 #we make the design of the header with the title and the logo
 
 def header() :
-    LOGO_IMAGE = "recog_site\picture\home\logo_chou.png"
-    MAL_PICT = "recog_site\picture\home\malardalen-university-vasteras-sweden.jpg"
+    LOGO_IMAGE = "picture\home\logo_chou.png"
+    MAL_PICT = "picture\home\malardalen-university-vasteras-sweden.jpg"
     st.markdown('<p class="recog_title">recog</p>', unsafe_allow_html=True)
     st.markdown(f"""<img class="recog_img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">""", unsafe_allow_html=True)
     st.markdown(f"""<img class="mal_img" src="data:image/png;base64,{base64.b64encode(open(MAL_PICT, "rb").read()).decode()}">""", unsafe_allow_html=True)
@@ -174,13 +174,13 @@ def home_page() :
     st.markdown('<p class="body_text">You will find below an image illustrating our project, the following one illustrates the system.</p>', unsafe_allow_html=True)
     
     #IMAGE PRESENTATION PROJECT
-    IM_PROJ='recog_site\picture\home\img_explication.png'
+    IM_PROJ='picture\home\img_explication.png'
     st.markdown(f"""<img class="pict_proj" src="data:image/png;base64,{base64.b64encode(open(IM_PROJ, "rb").read()).decode()}">""", unsafe_allow_html=True)
     
     #IMAGE SYSTEM if push button, else we explain how the system work
     b = st.button("System")
     if b:
-        IM_SYS='recog_site\picture\home\system.png'
+        IM_SYS='picture\home\system.png'
         st.markdown(f"""<img class="pict_syst" src="data:image/png;base64,{base64.b64encode(open(IM_SYS, "rb").read()).decode()}">""", unsafe_allow_html=True)
     else :
         st.markdown('<p class="body_text">The system is based on acquiring data, processing it while the game is taking place. Then we send the data to the ANN which classifies the data to send feedback on the difficulty that will change the game.</p>', unsafe_allow_html=True)
@@ -237,7 +237,7 @@ def MG_page() :
     st.markdown("<p class='body_text'>The memory game is actually a game used to analyze a patient's ability to respond to a stroke. It consists of a game grid where squares appear and the patient has to answer if the square was placed in the same place as the previous square. There are several difficulty levels as well as different game modes: 0-back, 1-back, 2-back.</p>", unsafe_allow_html=True)
 
     #picture Memory Game
-    IM_MG='recog_site\picture\Memory_Game\mg_img.png'
+    IM_MG='picture\Memory_Game\mg_img.png'
     st.markdown(f"""<img class="pict_mg" src="data:image/png;base64,{base64.b64encode(open(IM_MG, "rb").read()).decode()}">""", unsafe_allow_html=True)
     
     #Print back modes and choose one
@@ -248,15 +248,15 @@ def MG_page() :
         col1, col2, col3 = st.columns(3)
         with col1:
             st.title("1st Round")
-            IM_0back1='recog_site\picture\Memory_Game\mg_0back_1.png'
+            IM_0back1='picture\Memory_Game\mg_0back_1.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_0back1, "rb").read()).decode()}">""", unsafe_allow_html=True)
         with col2:
             st.title("2nd Round")
-            IM_0back2='recog_site\picture\Memory_Game\mg_0back_2.png'
+            IM_0back2='picture\Memory_Game\mg_0back_2.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_0back2, "rb").read()).decode()}">""", unsafe_allow_html=True)
         with col3:
             st.title("3rd Round")
-            IM_0back3='recog_site\picture\Memory_Game\mg_0back_3.png'
+            IM_0back3='picture\Memory_Game\mg_0back_3.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_0back3, "rb").read()).decode()}">""", unsafe_allow_html=True)
     
     if option == '1-back':
@@ -265,15 +265,15 @@ def MG_page() :
         col1, col2, col3 = st.columns(3)
         with col1:
             st.title("1st Round")
-            IM_1back1='recog_site\picture\Memory_Game\mg_1back_1.png'
+            IM_1back1='picture\Memory_Game\mg_1back_1.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_1back1, "rb").read()).decode()}">""", unsafe_allow_html=True)
         with col2:
             st.title("2nd Round")
-            IM_1back2='recog_site\picture\Memory_Game\mg_1back_2.png'
+            IM_1back2='picture\Memory_Game\mg_1back_2.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_1back2, "rb").read()).decode()}">""", unsafe_allow_html=True)
         with col3:
             st.title("3rd Round")
-            IM_1back3='recog_site\picture\Memory_Game\mg_1back_3.png'
+            IM_1back3='picture\Memory_Game\mg_1back_3.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_1back3, "rb").read()).decode()}">""", unsafe_allow_html=True)
     if option == '2-back':
         st.markdown("<p class='body_text'>The 2-back allows you to respond if the square is in the same place as the square present two turns before this one. In the 2-back mode, the patient has to compare each appearing square with the two previous ones.</p>", unsafe_allow_html=True)
@@ -281,15 +281,15 @@ def MG_page() :
         col1, col2, col3 = st.columns(3)
         with col1:
             st.title("1st Round")
-            IM_2back1='recog_site\picture\Memory_Game\mg_2back_1.png'
+            IM_2back1='picture\Memory_Game\mg_2back_1.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_2back1, "rb").read()).decode()}">""", unsafe_allow_html=True)
         with col2:
             st.title("2nd Round")
-            IM_2back2='recog_site\picture\Memory_Game\mg_2back_2.png'
+            IM_2back2='picture\Memory_Game\mg_2back_2.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_2back2, "rb").read()).decode()}">""", unsafe_allow_html=True)
         with col3:
             st.title("3rd Round")
-            IM_2back3='recog_site\picture\Memory_Game\mg_2back_3.png'
+            IM_2back3='picture\Memory_Game\mg_2back_3.png'
             st.markdown(f"""<img class="pict_back" src="data:image/png;base64,{base64.b64encode(open(IM_2back3, "rb").read()).decode()}">""", unsafe_allow_html=True)
  
     #Explain the training and classifying mode
@@ -398,10 +398,10 @@ def preprocessing() :
     #Picture of the camera system
     im_1, im_2 = st.columns(2)
     with im_1 :
-        IM_gaze='recog_site\picture\datavisu\datavisu_gaze.png'
+        IM_gaze='picture\datavisu\datavisu_gaze.png'
         st.markdown(f"""<img class="pict_data_visu" src="data:image/png;base64,{base64.b64encode(open(IM_gaze, "rb").read()).decode()}">""", unsafe_allow_html=True)
     with im_2 :
-        IM_eye='recog_site\picture\datavisu\datavisu_eye.png'
+        IM_eye='picture\datavisu\datavisu_eye.png'
         st.markdown(f"""<img class="pict_datavisu_eye" src="data:image/png;base64,{base64.b64encode(open(IM_eye, "rb").read()).decode()}">""", unsafe_allow_html=True)
 
     #Print the title and plot of pupil size and quality
@@ -423,7 +423,7 @@ def ANN_page():
     st.markdown("<p class='body_text'>The ANN is the model for our project: it is an artificial neural network that attempts to model the functioning of neurons in the brain. Each neuron sends a signal to another one, which processes it and then sends it to another neuron. The processing of these neurons corresponds to a digital processing between the nodes of the neurons. Neurons are layered together, and multiple layers are used to get to the exit node.</p>", unsafe_allow_html=True)
     st.markdown("<p class='body_text'>The goal for ANN is to learn on its own by adjusting the weights of the nodes according to the learning algorithm, so that it becomes as reliable as possible. In our project, the ANN is made up of a real-time (RT) part and an FPGA part on the industrial controller (IC). These two parts communicate with each other to form and classify the data in a queue.</p>", unsafe_allow_html=True)
     #Picture
-    IM_ann='recog_site\picture\ANN.png'
+    IM_ann='picture\ANN.png'
     st.markdown(f"""<img class="pict_ann" src="data:image/png;base64,{base64.b64encode(open(IM_ann, "rb").read()).decode()}">""", unsafe_allow_html=True)
 
 
