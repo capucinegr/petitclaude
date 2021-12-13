@@ -22,11 +22,129 @@ def print_checkbox(df) :
 
 #You can find the css part in the css file, it's to personnalize the application
 #we need to read it
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+def css():
+    st.markdown("""
+    <style>
+        .welcome{
+            text-align : left;
+            font-family: Verdana, sans-serif;
+            font-size: xx-large;
+            color : #008B82;
+            font-weight: bold;
+            margin-bottom : 40px;
+            margin-top : 40px;
+        }
 
-local_css("style.css")
+        .body_text{
+            font-family: Verdana, sans-serif;
+            font-size: medium;
+            color : white;
+            text-align : justify;
+        }
+
+        .recog_title{
+            text-align : center;
+            font-family: Verdana, sans-serif;
+            font-size: xxx-large;
+        }
+
+        .recog_img{
+            position: absolute;
+            top: -140px;
+            left : 170px;
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+        .mal_img{
+            position: relative;
+            top: -200px;
+            left : 700px;
+            max-height: 40px;
+        }
+
+        .whatisrecog{
+            text-align : center;
+            font-family: Verdana, sans-serif;
+            font-size: large;
+            color : #008B82;
+            font-weight: bold;
+        }
+
+        .pict_proj{
+            position : relative;
+            top : 0px;
+            left : 150px;
+        }
+
+        div.stButton > button:first-child {
+            background-color: #ffffff;
+            color:#008b82;
+            margin-left: 310px; 
+            margin-top : 10px;
+        }
+        div.stButton > button:hover {
+            background-color: #008b82;
+            color:#ffffff;
+            margin-left: 310px; 
+            margin-top : 10px;
+        }
+
+        .pict_syst{
+            position : relative;
+            max-height: 350px;
+            top : 0px;
+            left : 15px;
+        }
+
+        .name{
+            text-align : center;
+            font-family: Verdana, sans-serif;
+            font-size: medium;
+            color : #FFF;
+        }
+
+        .role{
+            text-align : center;
+            font-family: Verdana, sans-serif;
+            font-size: large;
+            color : #FFF;
+            font-weight: bold;
+        }
+
+        .pict_mg{
+            position : relative;
+            max-height : 300px;
+            left : 50px;
+        }
+
+        .pict_back{
+            position : relative;
+            max-height : 150px;
+            left : -15px;
+        }
+
+        .pict_data_visu{
+            position : relative;
+            max-height : 200px;
+            left : 0px;
+        }
+
+        .pict_datavisu_eye{
+            position : relative;
+            max-height : 200px;
+            left : 100px;
+        }
+
+        .pict_ann{
+            position : relative;
+            max-height : 300px;
+            left : 130px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+css()
 
 #_____________________________________ HEADER __________________________________________
 #we make the design of the header with the title and the logo
